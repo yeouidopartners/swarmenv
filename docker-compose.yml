@@ -1,0 +1,22 @@
+services:
+  app:
+    image: test
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 15s
+        order: start-first
+      restart_policy:
+        condition: any
+        delay: 5s
+        window: 120s
+    secrets:
+      - service.secret
+    environment:
+      # mounted secret path envs must be endswith _FILE
+      - MY_SECRET_FILE=/run/secrets/service.secret
+
+secrets:
+  service.secret:
+    external: true

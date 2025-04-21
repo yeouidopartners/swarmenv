@@ -1,0 +1,24 @@
+{
+  "name": "@yeouidopartners/swarmenv",
+  "version": "1.0.0",
+  "main": "config.js",
+  "exports": {
+    "./config": "./config.js",
+    "./config.js": "./config.js"
+  },
+  "scripts": {},
+  "keywords": [
+    "docker",
+    "swarm",
+    "secrets",
+    "env",
+    "environment",
+    "variables"
+  ],
+  "author": "yeouidopartners",
+  "license": "MIT",
+  "description": "Load env variables from docker swarm mounted secrets",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
